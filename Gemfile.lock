@@ -12,6 +12,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     concurrent-ruby (1.2.2)
+    dotenv (2.8.1)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     minitest (5.18.0)
@@ -39,6 +40,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  dotenv
   rake
   sinatra
   sinatra-activerecord
