@@ -1,0 +1,107 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/LineLength:
+  Max: 90
+  AllowedPatterns:
+    - '^\s*describe\s.+\sdo$'
+    - '^\s*it\s.+\sdo$'
+    - '^\s*context\s.+\sdo$'
+    - "expect"
+
+Lint/AmbiguousBlockAssociation:
+  AllowedMethods:
+    - not_change
+
+Lint/MissingSuper:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/AsciiComments:
+  Exclude:
+    - features/**/*
+
+Style/BlockDelimiters:
+  AllowedMethods: []
+
+Naming/AsciiIdentifiers:
+  Exclude:
+    - features/**/*
+
+Naming/PredicateName:
+  AllowedMethods:
+    - is_a?
+    - has_functionality?
+    - has_watermark
+
+Naming/VariableNumber:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+  AllowedMethods:
+    - describe
+    - context
+    - it
+
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - spec/**/*
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 10
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/ExampleWithoutDescription:
+  Enabled: false
+
+RSpec/NoExpectationExample:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+Rails/TransactionExitStatement:
+  Enabled: false
+
+AllCops:
+  NewCops: enable
