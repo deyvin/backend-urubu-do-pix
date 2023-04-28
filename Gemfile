@@ -10,3 +10,8 @@ gem 'sinatra-activerecord'
 gem 'sqlite3'
 gem 'dotenv'
 gem 'puma'
+
+group :test do
+  gem "rspec"
+  gem "rack-test"
+end
