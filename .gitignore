@@ -1,2 +1,2 @@
-db/*
+db/*.sqlite3
 .env
