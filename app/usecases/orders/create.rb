@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-require 'byebug'
 
 require './app/model/order'
 require './app/adapters/repositories/order_repository'
