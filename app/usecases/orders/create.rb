@@ -9,10 +9,16 @@ module Orders
       @params = params
       @order = order
       @order_repository = order_repository
+      self
+    end
+
+    def with_user(user_id)
+      @user_id = user_id
+      self
     end
 
     def call
-      order = @order.new(value: @params[:value], user_id: @params[:user_id])
+      order = @order.new(value: @params[:value], user_id: @user_id)
       @order_repository.create!(order.to_hash)
     end
   end

@@ -14,6 +14,6 @@ post '/users' do
   { result: UsersController.create(params) }.to_json
 end
 
-post '/orders' do
-  { result: OrdersController.create(params) }.to_json
+post '/:user_id/orders' do
+  { result: OrdersController.new(params[:user_id]).create(params) }.to_json
 end
