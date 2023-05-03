@@ -9,7 +9,7 @@ RSpec.describe Orders::Create do
     let(:user) do
       Users::Create.new(params: { name: 'John' }).call
     end
-    
+
     let(:create_order) do
       described_class.new(params: { value: 200 }).with_user(user.id)
     end

@@ -9,7 +9,6 @@ module Orders
       @params = params
       @order = order
       @order_repository = order_repository
-      self
     end
 
     def with_user(user_id)
